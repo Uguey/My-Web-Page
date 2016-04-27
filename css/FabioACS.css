@@ -1,0 +1,447 @@
+/* General */
+
+html, body {
+	min-height: 100%;
+	min-width: 100%;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-size: 100%;
+}
+
+.titles {
+	text-align: center;
+	color: white;
+	font-size: 8em;
+	font-family: "Verdana",  Times, serif;
+}
+
+.secondaryTitles {
+	margin-left: 13%;
+	font-size: 3.5em;
+}
+
+.borderLeft {
+	border-left-style: dotted;
+	border-left-width: 3.5px;
+	border-left-color: white;
+}
+
+.borderRight {
+	border-right-style: dotted;
+	border-right-width: 3.5px;
+	border-right-color: white;
+}
+
+@media (min-width: 992px) {
+	.borderLeftMd {
+		border-left-style: dotted;
+		border-left-width: 3.5px;
+		border-left-color: white;
+	}
+
+	.borderRightMd {
+		border-right-style: dotted;
+		border-right-width: 3.5px;
+		border-right-color: white;
+	}
+}
+
+.borderImages {
+	border-style: solid;
+	border-width: 2px; 
+	border-color: #A1A1A1;
+	border-radius: 25px;
+}
+
+a:link, a:visited, a:active {
+	text-decoration: none;
+    color: blue;
+}
+
+a:hover {
+	text-decoration: none;
+    color: #FF0000;
+}
+
+/* Section #up */
+#up {
+	overflow: hidden;
+}
+
+/* NavBar */
+#navBarShowUp {
+	display: none;
+	width: 100%;
+	z-index: 15;
+}
+
+#fixNavBarAndAddTransparency {
+	position: fixed;
+	z-index: 15;
+	opacity: 0.6;
+	filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+.navbarNames {
+	font-family: "Verdana", Times, serif;
+	text-align: center;
+	font-size: 3em;
+}
+
+#tweakSizeGlyphiconArrow {
+	font-size: 0.8em;
+	line-height: 70%;
+}
+
+/* When the NavBar is on computer */
+@media (min-width: 1015px){
+	#nameShowUp {
+		display: none;
+	}
+
+	#navbarIconLi {
+		width: 145px;
+	}
+
+	#navbarProfileLi {
+		width: 157px;
+	}
+
+	#navbarAboutMeLi {
+		width: 205px;
+	}
+
+	#navbarSkillsCVLi {
+		width: 220px;
+	}
+
+	#navbarContactMeLi {
+		width: 225px;
+	}
+
+	.borderNavBarRight {
+		border-right-style: dotted;
+		border-right-color: black;
+		border-right-width: 3px;
+	}
+}
+
+/* When the NavBar is on mobile devices */
+@media (max-width: 1015px){
+	#nameShowUp {
+		display: inline;
+	}
+
+	#navbarIconLi, #navbarProfileLi, #navbarAboutMeLi, 
+		#navbarSkillsCVLi, #navbarContactMeLi {
+			text-align: left;
+			width: 100%;
+	}
+
+	.borderNavBarRight {
+		border: none;
+	}
+}
+
+
+/* Video or Pic */
+video {
+	position: fixed;
+	top: 0px;
+	left: 0px;	
+	right: 0px;
+	bottom : 0px;
+	z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media (max-width: 768px) {
+	video {
+		display: none;
+	}
+	body {
+		background-image: url("../img/meInBeach.jpg");
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover !important;
+	} 
+}
+
+@media (min-width: 768px) {
+	video {
+		display: inline;
+	}
+	#imageForMobile {
+		display: none;
+	} 
+}
+
+/* Text */
+.textUp {
+	position: absolute;
+	z-index: 1;
+	font-family: "Verdana",  Times, serif;
+	color: black;
+	opacity: 0.6;
+	left: 14%;
+	top: 35%;
+}
+
+.subtitlesUp {
+	font-style: italic;
+}
+
+#CSUp, #andUp, #businessUp {
+	display: none;
+}
+
+
+/* Section #profile */
+
+#profile {
+	background-color: #A0A0A0;
+	width: 100%;
+	padding-bottom: 10%;
+	display: none;
+}
+
+.containerProfile {
+		margin-top: 10%;
+		width: 70%;
+		color: white;
+	}
+
+@media (min-width: 768px) {
+	.containerProfile {
+		margin-left: 20%;
+	}
+}
+
+@media (max-width: 768px) {
+	.containerProfile {
+		margin-left: 10%;
+	}
+}
+
+.secondaryTitlesProfile {
+	margin-left: 9%;
+	font-size: 3.5em;
+}
+
+.textProfile {
+	text-align: left;
+	margin-left: 3%;
+	font-size: 2em;
+}
+
+
+/* Section #aboutMe and #skillsCV */
+
+.containerAboutMeAndSkillsCV {
+	margin-top: 10%;
+	margin-bottom: 10%;
+	padding-right: 10%;
+	color: white;
+	overflow: hidden;	
+}
+
+.textAboutMeAndSkillsCV {
+	
+	margin-left: 12%;
+	font-size: 2em;
+	margin-top: 3%;
+}
+
+@media (min-width: 768px) {
+	.textAboutMeAndSkillsCV {
+		text-align: justify;
+	}
+}
+
+@media (max-width: 768px) {
+	.textAboutMeAndSkillsCV {
+		text-align: left;
+	}
+}
+
+
+/* Section #aboutMe */
+
+#aboutMe {
+	background-color: #888888;
+	width: 100%;
+	padding-bottom: 10%;
+	display: none;
+}
+
+#myPic {
+	display:block;
+	width: 70%;	
+	max-width: 405px;
+	max-height: 460px;
+	margin: auto;
+}
+
+#completale {
+	width: 90%;	
+	height: 100%;
+	margin-left: 5%;
+}
+
+
+/* Section #skillsCV */
+
+#skillsCV {
+	background-color: #707070;
+	width: 100%;
+	display: none;
+}
+
+/* Images */
+#GPA {
+	margin-top: 5%;
+	margin-left: 10%;
+	width: 80%;
+	height: 50%;
+}
+
+#imagineware {
+	margin-top: 5%;
+	margin-left: 12%;
+	width: 80%;
+	height: 50%;
+}
+
+/* Graphics */
+.titlesGraphicsSkills {
+	color: white;
+	text-align: center;
+	font-size: 3.5em;
+}
+
+#containerOfCSSkillsForBorder {
+	width: 102.5%;
+}
+
+.containerOfCSSkills {	
+	width: 77.5%;
+	margin-top: 5%;
+	margin-left: 10%;
+	margin-right: 12.5%;
+}
+
+.containerOfBusinessSkills {
+	width: 80%;
+	margin-top: 5%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.lettersGraphics {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+/* CV */
+#titleCV {
+	color: white;
+	text-align: center;
+}
+
+@media (max-width: 330px) {
+	#CVContainer {
+		position: relative;
+		width: 90%;
+		margin: auto;
+		margin-top: 4%;
+		margin-bottom: 5%;
+	}
+	#titleCV {
+		font-size: 2.5em;
+	}
+}
+
+@media (min-width: 330px) {
+	#CVContainer {
+		position: relative;
+		width: 297px;
+		margin: auto;
+		margin-top: 4%;
+		margin-bottom: 5%;
+	}
+	#titleCV {
+		font-size: 3.5em;
+	}
+}
+
+/* Section #contactMe */
+
+#contactMe {
+	width: 100%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	background-color: #585858;
+	display: none;
+}
+
+#contactMe h2 {
+	text-align: center;
+	color: white;
+	font-size: 8em;
+	font-family: "Verdana"  Times, serif;
+}
+
+#containerLogos {
+	max-width: 465px;
+	margin: auto;
+	margin-bottom: 2%;
+	margin-top: 2%;
+}
+
+.logos {
+	width: 130px;
+	height: 130px;
+	margin: 10px;
+}
+
+.logos:hover {
+	 -ms-transform: scale(1.2,1.2); /* IE 9 */
+    -webkit-transform: scale(1.2,1.2); /* Safari */
+    transform: scale(1.2,1.2);
+}
+
+
+/* Footer */
+footer {
+	width: 100%;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	background-color: #404040;
+	display: none;
+}
+
+footer p {
+	font-size: 1.5em;
+	color: white;
+	text-align: center;
+}
+
